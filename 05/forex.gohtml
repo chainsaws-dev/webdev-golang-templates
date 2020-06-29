@@ -1,0 +1,34 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <table>
+      {{range $idx, $line := .}}
+        {{if eq $idx 0}}          
+          <tr>
+            {{range $idxc, $header :=$line}}
+            <th>{{$header}}</th>
+            {{end}}
+          </tr>          
+        {{end}}
+          {{if ne $idx 0}}
+          <tr>
+            {{range $idxcn, $valcel :=$line}}
+            <td>{{$valcel}}</td>
+            {{end}}
+          </tr>
+          {{end}}
+      {{end}}    
+    </table>
+
+</body>
+
+</html>

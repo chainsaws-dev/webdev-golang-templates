@@ -1,0 +1,16 @@
+{{define "CoursesTable"}}
+<table>
+    <tr>
+        <th>Number</th>
+        <th>Name</th>
+        <th>Units</th>
+      </tr>
+      {{range .}}
+      <tr>
+        <td>{{.Number}}</td>
+        <td>{{.Name}}</td>
+        <td>{{.Units}}</td>
+      </tr>
+      {{end}}
+</table>
+{{end}}
